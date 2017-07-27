@@ -3,13 +3,11 @@ layout: default
 title: Henrik Carlioth
 ---
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
+	<h1 class="title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+	{% include meta.html %}
+	<div class="entry-content" itemprop="articleBody">
+		{{ post.content }}
+	</div>
 {% endfor %}
 <nav id="pagenavi">
     {% if paginator.previous_page %}
