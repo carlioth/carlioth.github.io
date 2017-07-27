@@ -1,7 +1,7 @@
 theme: jekyll-theme-midnight
 name: Henrik Carlioth
 markdown: kramdown
-
+github_repo_url: https://github.com/carlioth/carlioth.github.io
 
 permalink: /archive/:year/:month/:day/:title/
 paginate: 5
